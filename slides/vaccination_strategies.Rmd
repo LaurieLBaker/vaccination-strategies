@@ -129,10 +129,10 @@ Office for National Statistics<br>Glasgow, Scotland
 ???
 
 ---
-# Overview
+# Overview:
 
 .pull-left[
-### Vaccination planning for a wildlife disease
+### Wildlife Disease
 
 
 ```{r, echo=FALSE, out.width=510, fig.align='center', fig.cap="Map marked with vaccination planning sites"}
@@ -175,9 +175,16 @@ knitr::include_graphics("images/small_pox_rinderpest.PNG")
 
 
 
-* Mass vaccination can greatly reduce the burden of vaccine-preventable diseases.
+* Mass vaccination can reduce the burden of vaccine-preventable diseases.
 
-* However it is unclear how long vaccination must operate to eliminate infection.
+* How many vaccination campaigns does it take to eliminate infection?
+
+???
+- Only two infectious diseases have been eliminated worldwide: small pox and rinderpest.
+
+- Mass vaccination can greatly reduce the burden of vaccine-preventable diseases.
+
+- However, it is unclear how long vaccination programs must operate to eliminate infection. 
 
 ---
 # Rabies
@@ -194,26 +201,21 @@ knitr::include_graphics("images/rabies_hosts.jpg")
 
 ???
 
-* Red fox is the primary reservoir in Europe
+* Rabies is a deadly disease that kills over 59,000 people each year, with many millions more requiring expensive life-saving vaccines.
+* Rabies is an RNA lyssavirus that causes encephalitis in a large range of mammals. 
+* This map shows the primary reservoirs (that is the hosts that perpetuate this disease).
+* The main reservoir in Europe is the red fox.
 
----
-# Spread of Rabies in Foxes
-
-
-```{r, echo=FALSE, out.width=800, fig.align='center', fig.cap="Tidy Data."}
-
-knitr::include_graphics("images/rabies_spread.png")
-
-```
 
 ---
 # Foxes
 
 * Most widespread terrestrial carnivore in Europe
-* Territorial with high population turnover: 
+--
+* Territorial with high population turnover 
   * Most foxes live on average 4 years. 
   * Large birth pulse where the population doubles. 
-
+--
 
 ```{r, echo=FALSE, out.width=750, fig.align='center', fig.cap="Rabies cycle in foxes."}
 
@@ -224,16 +226,48 @@ knitr::include_graphics("images/fox_rabies_timeline.png")
 ???
 
 * Most widespread terrestrial carnivore in Europe
-* Territorial with high population turnover: 
+* Territorial with high population turnover 
   * Most foxes live on average 4 years. 
-  * Large birth pulse where the population doubles. 
+  * Large birth pulse in Spring where the population doubles. 
+
+---
+# Spread of Rabies in Foxes
+
+.left-column[
+```{r, echo=FALSE, out.width=820, fig.align='center', fig.cap="Tidy Data."}
+
+knitr::include_graphics("images/rabies_spread.png")
+
+```
+]
+.right-column[
+
+
+]
+
+* **1940s:** Spillover from dogs to foxes
+
+--
+
+* **1950s-1970s:** Rapid spread throughout Europe
+
+--
+
+* **Late 1970s:** Veterinarians facing major health crisis
+
+--
+
+`r icons::fontawesome("pizza-slice")` Lunch Warning: Next Slide
 
 
 ---
 # Vaccine Deployment
 
+AKA ["That Time Europe Air-dropped Vaccine-loaded Chicken Heads to Bait Rabid Foxes"](https://www.theatlantic.com/science/archive/2015/12/that-time-europe-air-dropped-vaccine-loaded-chicken-heads-to-bait-rabid-foxes/417951/)
+
+
 .left-column[
-```{r, echo=FALSE, out.height=580, out.width = 700, fig.align='center', fig.cap="Animation showing distribution of vaccines."}
+```{r, echo=FALSE, out.height=530, out.width = 680, fig.align='center', fig.cap="Animation showing distribution of vaccines."}
 
 knitr::include_graphics("images/western_europe_vac_cases_oct_2016.gif")
 
@@ -244,14 +278,16 @@ knitr::include_graphics("images/western_europe_vac_cases_oct_2016.gif")
 .right-column[
 <br>
 
-```{r, echo=FALSE, out.width=260, fig.align='center', fig.cap="Fixed wing aircraft used to distribute vaccines. Vaccine-loaded chicken head."}
+```{r, echo=FALSE, out.width=240, fig.align='center', fig.cap="Figure 1. Vaccine-loaded chicken heads. Figure 2. Fixed wing aircraft used to distribute vaccines."}
 
 knitr::include_graphics(c("images/chicken_head.jpg", "images/fixed_wing_hungary.jpg"))
 
 
 ```
 
-AKA ["That Time Europe Air-dropped Vaccine-loaded Chicken Heads to Bait Rabid Foxes"](https://www.theatlantic.com/science/archive/2015/12/that-time-europe-air-dropped-vaccine-loaded-chicken-heads-to-bait-rabid-foxes/417951/)
+
+`r icons::fontawesome("syringe")` At least they didn't go with the spring-loaded needle traps!
+
 
 ]
 
@@ -267,7 +303,7 @@ Over three decades, vaccine loaded chicken-heads were air-dropped across Europe 
 # Study
 
 .left-column[
-```{r, echo=FALSE, out.width=590, fig.align='center', fig.cap="Incidence Ratio"}
+```{r, echo=FALSE, out.width=510, fig.align='center', fig.cap="Incidence Ratio"}
 
 knitr::include_graphics("images/vaccination_planning.jpg")
 
@@ -276,29 +312,48 @@ knitr::include_graphics("images/vaccination_planning.jpg")
 ]
 .right-column[
 
+### Where should we drop vaccines?
+  * Geographically
+  * Timing: Spring, Autumn
+  
+### What happens when things go wrong?
+  * Impact of missed vaccination campaign sets
 
 ]
 
+.footnote[
+**Baker LL**, Matthiopoulos J, Mul̈ler T, Freuling C, Hampson K (2019). Optimizing
+spatial and seasonal deployment of vaccination campaigns to eliminate wildlife
+rabies. **Phil. Trans. R. Soc. B.** 374.]
+
 
 ---
-# Findings
+# Time to Control and Elimination
 
 
 
-```{r, echo=FALSE, out.width=900, fig.align='center', fig.cap="Incidence Ratio"}
+```{r, echo=FALSE, out.width=850, fig.align='center', fig.cap="Incidence Ratio of Rabies over time in response to vaccination"}
 
 knitr::include_graphics("images/incidence_ratio.jpg")
 
 
 ```
 
+.footnote[
+**Baker LL**, Matthiopoulos J, Mul̈ler T, Freuling C, Hampson K (2019). Optimizing
+spatial and seasonal deployment of vaccination campaigns to eliminate wildlife
+rabies. **Phil. Trans. R. Soc. B.** 374.]
+
+???
+* Consecutive vaccination campaign sets build up and sustain high levels of herd immunity
+
 ---
-# Findings
+# Impact of Missing Campaigns
 
 .left-column[
 
 
-```{r, echo=FALSE, out.width=1000, fig.align='center', fig.cap="Incidence Ratio"}
+```{r, echo=FALSE, out.width=800, fig.align='center', fig.cap="Time to elimination for missed vaccination campaign sets."}
 
 knitr::include_graphics("images/rabies_presence.jpg")
 
@@ -308,28 +363,41 @@ knitr::include_graphics("images/rabies_presence.jpg")
 ]
 
 .right-column[
-* Consecutive and coordinated vaccination is required to rapidly control and eliminate rabies.
 
-* Implementing consecutive vaccination campaign sets to build up and sustain high levels of herd immunity
+* Incomplete vaccination compromised time to elimination.
 
-* Incomplete vaccination (missing campaign sets) compromised time to elimination.
+* Requiring the same or more effort to achieve similar vaccination timelines.
 
-* The same or more effort required to achieve elimination and meet similar timelines.
+* Autumn campaigns post-birth pulse were most important.
+
 ]
+
 
 
 ???
 
-* Consecutive and coordinated vaccination is required to rapidly control and eliminate rabies.
+* We found that consecutive and coordinated vaccination across geographical regions is required to rapidly control and eliminate rabies
 
-* Missing Campaigns
+* Incomplete vaccination (missing campaign sets) compromised time to elimination, with the same or more effort required to achieve elimination and meet similar timelines. 
 
-Overall we recommend (i) prioritizing ORV campaign sets following the birth pulse, i.e. in autumn, if resources are limited; (ii) 
+- It is, therefore, important that policymakers commit to the full elimination timeline and strive to maintain comprehensive coverage to eliminate persistent foci and prevent further costs.
 
-* Implementing consecutive vaccination campaign sets to build up and sustain high levels of herd immunity;
+---
+# Take Home
 
-By contrast, incomplete vaccination (missing campaign sets) compromised time to elimination, with the same or more effort required to achieve elimination and meet similar timelines. It is, therefore, important that policymakers commit to the full elimination timeline and strive to maintain comprehensive coverage to eliminate persistent foci and prevent further costs.
-We found that consecutive and coordinated vaccination across geographical regions is required to rapidly control and eliminate rabies
+### 1. Disease like rabies don't respect borders.
+
+--
+
+### 2. Consecutive and coordinated vaccination is required to rapidly control and eliminate rabies.
+
+--
+
+### 3. It is important to take into account population dynamics and  ecology of the species.
+
+--
+
+### 4. Policymakers need to commit to full elimination timelines and maintain comprehensive coverage to eliminate the disease.
 
 ---
 class: inverse, center, middle
@@ -390,7 +458,7 @@ leaflet(data = vac_loc) %>%
 
 
 ---
-# Open Data Healthsites Viewer
+# Importance of Open Data
 
 <iframe src="https://andysouth.shinyapps.io/healthsites_viewer/" width="1016" height="516" frameBorder="0"></iframe>
 
@@ -399,20 +467,45 @@ leaflet(data = vac_loc) %>%
 Open and up-to-date data is crucial to plan these efforts. With afrimapr we've been working closely with healthsites.io and other open mapping efforts to gather and visualise the data that is needed.
 
 ---
-# Health Accessibility in Côte d'Ivoire
+# How do we define accessibility?
+
+.left-column[
 
 ```{r, echo=FALSE, out.width=650, fig.align='center', fig.cap="Map of Côte d'Ivoire showing estimated travel time walking."}
 
 knitr::include_graphics("images/walk_travel_health.png")
 
 ```
-Travel Time in minutes
+
+### Health Accessibility, Côte d'Ivoire
+ **Travel time in minutes walking**
+]
+
+.right-column[
+
+]
+
+--
+
+## Financial barriers?
+
+--
+
+## Organisational barriers?
+
+--
+
+## Social and Cultural barriers?
+
 ???
 Remote sensing and other open data sets can help to approximate health accessibility in a "physical sense". 
 
-But there are other complex and social economic factors that we are often missing.
+But if we define accessibility only in terms of physical distances, what are we missing?
 
-The people who are best placed to answer these questions and devise a strategy are those communities who are closest to the issue.
+The extent to which a population 'gains access' also depends on financial, organisational and social or cultural barriers that limit the utilisation of services.
+
+
+The people who are best placed to answer these questions and devise a strategy are the communities and healthworkers with local knowledge who are closest to the issue.
 
 ---
 # Afrimapr tutorials
@@ -421,7 +514,7 @@ The people who are best placed to answer these questions and devise a strategy a
 [Afrimapr Tutorials](https://andysouth.shinyapps.io/intro-to-spatial-r/)
 
 ???
-With Afrimapr I am helping to develop tutorials to teach communities the operational programming tools to answer important questions. 
+With Afrimapr I am helping to develop spatial tutorials to equip communities with the tools to engage in data science work so that they may address issues of local and/or ecocultural importance 
 
 
 ---
@@ -436,6 +529,8 @@ knitr::include_graphics("images/tidydata_5.jpg")
 ```
 
 Artwork by @allison_horst
+
+--
 
 ## But we bring the
 
@@ -463,13 +558,37 @@ Artwork by @allison_horst
 ### Knowledge
 ]]
 
+???
+
+Computer science and data science can provide us with the tools to tackle issues, but
+
+Data is always a simplification of the human experience. 
+
 ---
+class: center
 # What excites me about Bates
+
+
+`r icons::icon_style(icons::fontawesome("wave-square", style = "solid"), scale = 2)` 
+### Navigating these topics with you
+
+--
+
+`r icons::icon_style(icons::fontawesome("tools", style = "solid"), scale = 2)` 
+### Helping you build the computer science toolset
+
+
+--
+`r icons::icon_style(icons::fontawesome("hands-helping", style = "solid"), scale = 2)` 
+### to apply to  issues **you care about**.
+
+--
+
+`r icons::icon_style(icons::fontawesome("users", style = "solid"), scale = 2)` 
+### Engaging with communities around Maine
 
 ???
 
-- Work with students at intersection of different topics
-- And on important issues in Maine. 
 - I'm very excited to hear about the questions that you are excited about exploring
 
 ---
