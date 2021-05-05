@@ -83,9 +83,9 @@ class: middle, left
 
 ## Laurie Baker
 
-### Data Science Lecturer
+### Head of Faculty
 
-Office for National Statistics<br>Glasgow, Scotland
+Data Science Campus, <br> Office for National Statistics
 ]]
 .pull-right[
 ### Education
@@ -128,38 +128,6 @@ Office for National Statistics<br>Glasgow, Scotland
 
 ???
 
----
-# Overview:
-
-.pull-left[
-### Wildlife Disease
-
-
-```{r, echo=FALSE, out.width=510, fig.align='center', fig.cap="Map marked with vaccination planning sites"}
-
-knitr::include_graphics("images/map_rabies_drops.png")
-
-```
-
-
-]
-
-.pull-right[
-### Vaccination planning for Covid-19
-
-
-
-```{r, echo=FALSE, out.width=480, fig.align='center', fig.cap="Map of Côte d'Ivoire showing estimated travel time walking."}
-
-knitr::include_graphics("images/walk_travel_health.png")
-
-```
-
-]
-
-???
-
-In this talk I'm going to talk about two very different vaccination contexts: vaccination planning for a wildlife disease. 
 
 ---
 # Background
@@ -177,7 +145,7 @@ knitr::include_graphics("images/small_pox_rinderpest.PNG")
 
 * Mass vaccination can reduce the burden of vaccine-preventable diseases.
 
-* How many vaccination campaigns does it take to eliminate infection?
+* Explore two vaccination case studies: fox rabies and covid-19
 
 ???
 - Only two infectious diseases have been eliminated worldwide: small pox and rinderpest.
@@ -187,10 +155,14 @@ knitr::include_graphics("images/small_pox_rinderpest.PNG")
 - However, it is unclear how long vaccination programs must operate to eliminate infection. 
 
 ---
+class: inverse, center, middle
+# Wildlife vaccination planning
+
+---
 # Rabies
 
 * Rabies is a deadly disease that kills over 59,000 people each year.
-* An RNA lyssavirus that causes encephalitis in a large range of mammals.
+* An RNA virus that causes encephalitis in a large range of mammals.
 
 ```{r, echo=FALSE, out.width=750, fig.align='center', fig.cap="Map of the world with main rabies animal hosts pictured."}
 
@@ -198,6 +170,7 @@ knitr::include_graphics("images/rabies_hosts.jpg")
 
 ```
 
+.footnote[Rupprecht CE, Hanlon CA, Hemachudha T. Rabies re-examined. Lancet Infect Dis. 2002 Jun;2(6):327-43. doi: 10.1016/s1473-3099(02)00287-6. PMID: 12144896.]
 
 ???
 
@@ -211,11 +184,11 @@ knitr::include_graphics("images/rabies_hosts.jpg")
 # Foxes
 
 * Most widespread terrestrial carnivore in Europe
---
+
 * Territorial with high population turnover 
   * Most foxes live on average 4 years. 
-  * Large birth pulse where the population doubles. 
---
+  * Large birth pulse in spring where the population doubles. 
+
 
 ```{r, echo=FALSE, out.width=750, fig.align='center', fig.cap="Rabies cycle in foxes."}
 
@@ -312,13 +285,14 @@ knitr::include_graphics("images/vaccination_planning.jpg")
 ]
 .right-column[
 
-### Where should we drop vaccines?
-  * Geographically
-  * Timing: Spring, Autumn
-  
-### What happens when things go wrong?
-  * Impact of missed vaccination campaign sets
+.center[
+`r icons::icon_style(icons::fontawesome("globe"), scale = 2)`
+### Where and when should we drop vaccines?
 
+
+`r icons::icon_style(icons::fontawesome("exclamation-triangle"), scale = 2)`
+### What happens when things go wrong?
+]
 ]
 
 .footnote[
@@ -364,12 +338,22 @@ knitr::include_graphics("images/rabies_presence.jpg")
 
 .right-column[
 
-* Incomplete vaccination compromised time to elimination.
+.center[
+`r icons::icon_style(icons::fontawesome("clock"), scale = 2)`
 
-* Requiring the same or more effort to achieve similar vaccination timelines.
+### Delay elimination
 
-* Autumn campaigns post-birth pulse were most important.
 
+`r icons::icon_style(icons::fontawesome("money-bill-alt"), scale = 2)`
+
+
+### Same or more effort required to achieve elimination
+
+`r icons::icon_style(icons::fontawesome("baby"), scale = 2)`
+
+### Consecutive and autumn campaigns most important
+
+]
 ]
 
 
@@ -383,21 +367,26 @@ knitr::include_graphics("images/rabies_presence.jpg")
 - It is, therefore, important that policymakers commit to the full elimination timeline and strive to maintain comprehensive coverage to eliminate persistent foci and prevent further costs.
 
 ---
+class: center
 # Take Home
 
-### 1. Disease like rabies don't respect borders.
+
+`r icons::icon_style(icons::fontawesome("globe"), scale = 2)`
+
+### 1. Consecutive and geographically-coordinated vaccination is required to rapidly control and eliminate rabies.
 
 --
 
-### 2. Consecutive and coordinated vaccination is required to rapidly control and eliminate rabies.
+`r icons::icon_style(icons::fontawesome("paw"), scale = 2)`
+
+### 2. It is important to take into account population dynamics and  ecology of the species.
 
 --
 
-### 3. It is important to take into account population dynamics and  ecology of the species.
+`r icons::icon_style(icons::fontawesome("money-bill-alt"), scale = 2)`
 
---
 
-### 4. Policymakers need to commit to full elimination timelines and maintain comprehensive coverage to eliminate the disease.
+### 3. Policymakers need to commit to full elimination timelines and maintain comprehensive coverage to eliminate the disease.
 
 ---
 class: inverse, center, middle
@@ -431,9 +420,9 @@ DT::datatable(vac_loc,
 
 ```{r, echo = FALSE}
 iconset1 <- awesomeIconList(
-   "Pharmacy" = makeAwesomeIcon(text = fa("syringe"), markerColor = "orange"),
-   "Health Care Center" = makeAwesomeIcon(text = fa("syringe"), markerColor = "lightred"),
-   "Mobile Vaccination Unit" = makeAwesomeIcon(text = fa("syringe"), markerColor = "red")
+   "Pharmacy" = makeAwesomeIcon(text = fontawesome("syringe"), markerColor = "orange"),
+   "Health Care Center" = makeAwesomeIcon(text = fontawesome("syringe"), markerColor = "blue"),
+   "Mobile Vaccination Unit" = makeAwesomeIcon(text = fontawesome("syringe"), markerColor = "red")
 )
 
 labels <- sprintf(
@@ -568,24 +557,26 @@ Data is always a simplification of the human experience.
 class: center
 # What excites me about Bates
 
-
-`r icons::icon_style(icons::fontawesome("wave-square", style = "solid"), scale = 2)` 
-### Navigating these topics with you
+<br>
 
 --
 
 `r icons::icon_style(icons::fontawesome("tools", style = "solid"), scale = 2)` 
-### Helping you build the computer science toolset
-
+### Help you to build your computer science toolset
 
 --
+
 `r icons::icon_style(icons::fontawesome("hands-helping", style = "solid"), scale = 2)` 
-### to apply to  issues **you care about**.
+### Support you in applying these tools to issues you care about
+
+--
+`r icons::icon_style(icons::fontawesome("wave-square", style = "solid"), scale = 2)` 
+### Navigate the role of data in society with you 
 
 --
 
 `r icons::icon_style(icons::fontawesome("users", style = "solid"), scale = 2)` 
-### Engaging with communities around Maine
+### Work and engage with communities around Maine
 
 ???
 
@@ -593,11 +584,9 @@ class: center
 
 ---
 
-class: center, middle
+# Acknowledgements
 
-# Thanks!
-
-
+.left-column[
 ```{r, echo=FALSE, out.width=400, fig.align='center', fig.cap="Cake with fox and chicken heads on it"}
 
 knitr::include_graphics("images/fox_cake.jpg")
@@ -608,5 +597,28 @@ knitr::include_graphics("images/fox_cake.jpg")
 Slides created via the R package [**xaringan**](https://github.com/yihui/xaringan).
 
 The chakra comes from [remark.js](https://remarkjs.com), [**knitr**](http://yihui.name/knitr), and [R Markdown](https://rmarkdown.rstudio.com).
+]
+
+.right-column[
+
+**University of Glasgow**: 
+
+Prof. Katie Hampson; 
+Micaela De la Puente Leon;
+Prof. Jason Matthiopoulos
+
+**Friedrich Loeffler Institut**: 
+
+Dr. Thomas Muller; Dr. Conrad Freuling; Patrick Wysocki
+
+**Afrimapr**: 
+
+Dr. Andy South (LSTM); Dr. Ahmadou Dicko (FAO, Senegal); Anelda Van der Walt (Talarify); Mark Herringer (healthsites.io);
+
+**FCDO & ONS, UK**:  
+Dr. Joseph Crispell, Dr. Kevin Carolan
+
+]
+
 
 

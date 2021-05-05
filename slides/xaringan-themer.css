@@ -113,7 +113,7 @@ a, a > code {
 }
 .footnote {
   position: absolute;
-  bottom: 60px;
+  bottom: 5px;
   padding-right: 4em;
   font-size: 0.9em;
 }

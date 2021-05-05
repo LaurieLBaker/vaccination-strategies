@@ -42,21 +42,21 @@
   --header-h3-font-size: 1.75rem;
 
   /* Colors */
-  --text-color: #000000;
+  --text-color: #23395b;
   --header-color: #23395b;
   --background-color: #FFFFFF;
   --link-color: #23395b;
   --text-bold-color: #23395b;
   --code-highlight-color: rgba(255,255,0,0.5);
   --inverse-text-color: #000000;
-  --inverse-background-color: #f48d23;
-  --inverse-header-color: #23395b;
+  --inverse-background-color: #23395b;
+  --inverse-header-color: #ffa500;
   --title-slide-background-color: #23395b;
   --title-slide-text-color: #FFFFFF;
   --header-background-color: #23395b;
   --header-background-text-color: #FFFFFF;
   --primary: #23395b;
-  --secondary: #f48d23;
+  --secondary: #48D1CC;
   --white: #FFFFFF;
   --black: #000000;
 }
@@ -75,6 +75,7 @@ h1, h2, h3 {
   font-weight: 600;
   color: var(--header-color);
 }
+
 .remark-slide-content {
   background-color: var(--background-color);
   font-size: 1rem;
@@ -113,7 +114,7 @@ a, a > code {
 }
 .footnote {
   position: absolute;
-  bottom: 60px;
+  bottom: 5px;
   padding-right: 4em;
   font-size: 0.9em;
 }
