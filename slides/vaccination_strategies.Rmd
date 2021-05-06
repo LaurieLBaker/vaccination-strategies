@@ -70,6 +70,7 @@ class: middle, left
 ### `r rmarkdown::metadata$date`
 
 
+.footnote[Map courtesy of the Friedrich Loeffler Institut]
 
 ---
 class: middle, left
@@ -196,6 +197,7 @@ knitr::include_graphics("images/fox_rabies_timeline.png")
 
 ```
 
+.footnote[Figure courtesy of the Friedrich Loeffler Institut]
 ???
 
 * Most widespread terrestrial carnivore in Europe
@@ -212,6 +214,10 @@ knitr::include_graphics("images/fox_rabies_timeline.png")
 knitr::include_graphics("images/rabies_spread.png")
 
 ```
+
+
+.footnote[Figure courtesy of the Friedrich Loeffler Institut]
+
 ]
 .right-column[
 
@@ -240,12 +246,14 @@ AKA ["That Time Europe Air-dropped Vaccine-loaded Chicken Heads to Bait Rabid Fo
 
 
 .left-column[
-```{r, echo=FALSE, out.height=530, out.width = 680, fig.align='center', fig.cap="Animation showing distribution of vaccines."}
+```{r, echo=FALSE, out.height=510, out.width = 660, fig.align='center', fig.cap="Animation showing distribution of vaccines."}
 
 knitr::include_graphics("images/western_europe_vac_cases_oct_2016.gif")
 
 ```
 
+
+.footnote[Images: Friedrich Loeffler Institut]
 ]
 
 .right-column[
@@ -286,20 +294,65 @@ knitr::include_graphics("images/vaccination_planning.jpg")
 .right-column[
 
 .center[
+
+### Simulated rabies cases to explore:
+
 `r icons::icon_style(icons::fontawesome("globe"), scale = 2)`
-### Where and when should we drop vaccines?
+
+### Where and when?
 
 
-`r icons::icon_style(icons::fontawesome("exclamation-triangle"), scale = 2)`
-### What happens when things go wrong?
+`r icons::icon_style(icons::fontawesome("money-bill-alt"), scale = 2)`
+
+
+### How many to achieve elimination?
+
 ]
 ]
 
 .footnote[
-**Baker LL**, Matthiopoulos J, Mul̈ler T, Freuling C, Hampson K (2019). Optimizing
+**Baker LL**, Matthiopoulos J, Müller T, Freuling C, Hampson K (2019). Optimizing
 spatial and seasonal deployment of vaccination campaigns to eliminate wildlife
 rabies. **Phil. Trans. R. Soc. B.** 374.]
 
+---
+# Where and When
+
+
+.left-column[
+
+
+```{r, echo=FALSE, out.width=500, fig.align='center', fig.cap="Time to elimination for missed vaccination campaign sets."}
+
+knitr::include_graphics("images/vaccination_placement.jpg")
+
+
+```
+
+]
+
+.right-column[
+
+.center[
+`r icons::icon_style(icons::fontawesome("money-bill-alt"), scale = 2)`
+
+
+### Similar effort in high-risk and endemic 
+
+`r icons::icon_style(icons::fontawesome("clock"), scale = 2)`
+
+### Autumn campaigns = greatest reductions
+
+`r icons::icon_style(icons::fontawesome("money-bill-alt"), scale = 2)`
+
+### Vaccination needed in rabies-free regions
+
+]
+]
+
+???
+
+Figure 2. Probability of elimination and ranked importance of campaigns across epidemiological scenarios. Left panels show the probability of elimination from all five regions in response to incremental vaccination (mean, and shaded 95% CI). (a) In the endemic scenario, 21 campaigns were required to eliminate rabies from all regions. (b) In the high-risk scenario, 19 campaigns were required to eliminate rabies from all regions, with vaccination of the endemic regions ranked first, and vaccination after the birth pulse (months 56 and 68) contributing most to the probability of elimination. A minimum of two or three campaigns was required in neighbouring rabies-free regions. (c) In the endgame scenario, nine campaigns were required to eliminate rabies from all regions.
 
 ---
 # Time to Control and Elimination
@@ -321,72 +374,35 @@ rabies. **Phil. Trans. R. Soc. B.** 374.]
 ???
 * Consecutive vaccination campaign sets build up and sustain high levels of herd immunity
 
----
-# Impact of Missing Campaigns
-
-.left-column[
-
-
-```{r, echo=FALSE, out.width=800, fig.align='center', fig.cap="Time to elimination for missed vaccination campaign sets."}
-
-knitr::include_graphics("images/rabies_presence.jpg")
-
-
-```
-
-]
-
-.right-column[
-
-.center[
-`r icons::icon_style(icons::fontawesome("clock"), scale = 2)`
-
-### Delay elimination
-
-
-`r icons::icon_style(icons::fontawesome("money-bill-alt"), scale = 2)`
-
-
-### Same or more effort required to achieve elimination
-
-`r icons::icon_style(icons::fontawesome("baby"), scale = 2)`
-
-### Consecutive and autumn campaigns most important
-
-]
-]
-
-
-
-???
-
-* We found that consecutive and coordinated vaccination across geographical regions is required to rapidly control and eliminate rabies
-
-* Incomplete vaccination (missing campaign sets) compromised time to elimination, with the same or more effort required to achieve elimination and meet similar timelines. 
-
-- It is, therefore, important that policymakers commit to the full elimination timeline and strive to maintain comprehensive coverage to eliminate persistent foci and prevent further costs.
 
 ---
 class: center
 # Take Home
 
 
+--
+.center[
 `r icons::icon_style(icons::fontawesome("globe"), scale = 2)`
 
-### 1. Consecutive and geographically-coordinated vaccination is required to rapidly control and eliminate rabies.
+### 1. Diseases like rabies do not respect borders
+]
+
+--
+
+.center[
+`r icons::icon_style(icons::fontawesome("hands-helping"), scale = 2)`
+
+### 2. Coordinated effort is required to control and eliminate rabies
+]
+
 
 --
 
 `r icons::icon_style(icons::fontawesome("paw"), scale = 2)`
 
-### 2. It is important to take into account population dynamics and  ecology of the species.
-
---
-
-`r icons::icon_style(icons::fontawesome("money-bill-alt"), scale = 2)`
-
-
-### 3. Policymakers need to commit to full elimination timelines and maintain comprehensive coverage to eliminate the disease.
+.center[
+### 3. Know your species/subject 
+]
 
 ---
 class: inverse, center, middle
@@ -420,9 +436,9 @@ DT::datatable(vac_loc,
 
 ```{r, echo = FALSE}
 iconset1 <- awesomeIconList(
-   "Pharmacy" = makeAwesomeIcon(text = fontawesome("syringe"), markerColor = "orange"),
-   "Health Care Center" = makeAwesomeIcon(text = fontawesome("syringe"), markerColor = "blue"),
-   "Mobile Vaccination Unit" = makeAwesomeIcon(text = fontawesome("syringe"), markerColor = "red")
+   "Pharmacy" = makeAwesomeIcon(markerColor = "orange"),
+   "Health Care Center" = makeAwesomeIcon(markerColor = "blue"),
+   "Mobile Vaccination Unit" = makeAwesomeIcon(markerColor = "red")
 )
 
 labels <- sprintf(
@@ -500,7 +516,8 @@ The people who are best placed to answer these questions and devise a strategy a
 # Afrimapr tutorials
 
 <iframe src="https://andysouth.shinyapps.io/intro-to-spatial-r/" width="1016" height="516" frameBorder="0"></iframe>
-[Afrimapr Tutorials](https://andysouth.shinyapps.io/intro-to-spatial-r/)
+
+Sign up for the [Afrimapr Tutorials](https://andysouth.shinyapps.io/intro-to-spatial-r/) and others at the [UseR! 2021 conference](https://www.conftool.org/user2021/index.php?page=browseSessions&form_session=3)
 
 ???
 With Afrimapr I am helping to develop spatial tutorials to equip communities with the tools to engage in data science work so that they may address issues of local and/or ecocultural importance 
@@ -570,21 +587,27 @@ class: center
 ### Support you in applying these tools to issues you care about
 
 --
-`r icons::icon_style(icons::fontawesome("wave-square", style = "solid"), scale = 2)` 
-### Navigate the role of data in society with you 
-
---
 
 `r icons::icon_style(icons::fontawesome("users", style = "solid"), scale = 2)` 
-### Work and engage with communities around Maine
+### Work and engage with communities across Maine
 
 ???
 
+- I'm excited about the opportunity to 
+  - Help you to build your computer science toolset
+  - support you in applying these tools to issues you care about.
+  - work and engage with communities across Maine.
 - I'm very excited to hear about the questions that you are excited about exploring
+
+
+
+`r icons::icon_style(icons::fontawesome("wave-square", style = "solid"), scale = 2)` 
+### Navigate the role of data in society with you 
+
 
 ---
 
-# Acknowledgements
+# Thank You!
 
 .left-column[
 ```{r, echo=FALSE, out.width=400, fig.align='center', fig.cap="Cake with fox and chicken heads on it"}
@@ -609,7 +632,7 @@ Prof. Jason Matthiopoulos
 
 **Friedrich Loeffler Institut**: 
 
-Dr. Thomas Muller; Dr. Conrad Freuling; Patrick Wysocki
+Dr. Thomas Müller; Dr. Conrad Freuling; Patrick Wysocki
 
 **Afrimapr**: 
 
@@ -620,5 +643,55 @@ Dr. Joseph Crispell, Dr. Kevin Carolan
 
 ]
 
+---
+class: inverse, center, middle
+# Additional slides
+
+---
+
+---
+# Impact of Missing Campaigns
+
+.left-column[
+
+
+```{r, echo=FALSE, out.width=800, fig.align='center', fig.cap="Time to elimination for missed vaccination campaign sets."}
+
+knitr::include_graphics("images/rabies_presence.jpg")
+
+
+```
+
+]
+
+.right-column[
+
+.center[
+`r icons::icon_style(icons::fontawesome("clock"), scale = 2)`
+
+### Delay elimination
+
+
+`r icons::icon_style(icons::fontawesome("money-bill-alt"), scale = 2)`
+
+
+### Same or more effort required to achieve elimination
+
+`r icons::icon_style(icons::fontawesome("baby"), scale = 2)`
+
+### Consecutive and autumn campaigns most important
+
+]
+]
+
+
+
+???
+
+* We found that consecutive and coordinated vaccination across geographical regions is required to rapidly control and eliminate rabies
+
+* Incomplete vaccination (missing campaign sets) compromised time to elimination, with the same or more effort required to achieve elimination and meet similar timelines. 
+
+- It is, therefore, important that policymakers commit to the full elimination timeline and strive to maintain comprehensive coverage to eliminate persistent foci and prevent further costs.
 
 
