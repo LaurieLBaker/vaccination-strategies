@@ -660,7 +660,7 @@ The chakra comes from [remark.js](https://remarkjs.com), [**knitr**](http://yihu
 **University of Glasgow**: 
 
 Prof. Katie Hampson; 
-Micaela De la Puente Leon;
+Micaela De la Puente León;
 Prof. Jason Matthiopoulos
 
 **Friedrich Loeffler Institut**: 
