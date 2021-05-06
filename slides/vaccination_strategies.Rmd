@@ -6,13 +6,13 @@ institute: "@llbaker1707"
 date: '6 May, 2021'
 output:
   xaringan::moon_reader:
+    anchor_sections: false
     fig_caption: false
     lib_dir: libs
     seal: false
     css: xaringan-themer2.css
     nature:
       highlightStyle: github
-      highlightLines: true
       countIncrementalSlides: true
       ratio: 16:9
 editor_options: 
@@ -44,12 +44,6 @@ knitr::opts_chunk$set(message=FALSE, warning=FALSE, hiline=TRUE)
 xaringanExtra::use_xaringan_extra(include = c("panelset", "tile_view", "share_again", "use_broadcast"))
 
 xaringanExtra::style_share_again(share_buttons = c("twitter", "linkedin", "pocket"))
-
-
-xaringanExtra::use_extra_styles(
-  hover_code_line = TRUE,         #<<
-  mute_unhighlighted_code = TRUE  #<<
-)
 
 
 ```
@@ -129,7 +123,7 @@ Data Science Campus, <br> Office for National Statistics
 
 ???
 
-
+About me.
 ---
 # Background
 
@@ -143,21 +137,31 @@ knitr::include_graphics("images/small_pox_rinderpest.PNG")
 ```
 
 
-
+--
 * Mass vaccination can reduce the burden of vaccine-preventable diseases.
 
-* Explore two vaccination case studies: fox rabies and covid-19
+--
+
+* How long does a vaccination programs need to run to eliminate a disease?
+
+--
+* Explore vaccination strategies applied to fox rabies and Covid-19
 
 ???
 - Only two infectious diseases have been eliminated worldwide: small pox and rinderpest.
 
-- Mass vaccination can greatly reduce the burden of vaccine-preventable diseases.
+- Mass vaccination can greatly reduce the burden of vaccine-preventable diseases. 
 
 - However, it is unclear how long vaccination programs must operate to eliminate infection. 
 
+- In this talk I am going to explore two different vaccination strategies applied to fox rabies and Covid-19.
 ---
 class: inverse, center, middle
 # Wildlife vaccination planning
+
+???
+
+The first example is an example of wildlife vaccination planning. 
 
 ---
 # Rabies
@@ -187,7 +191,7 @@ knitr::include_graphics("images/rabies_hosts.jpg")
 * Most widespread terrestrial carnivore in Europe
 
 * Territorial with high population turnover 
-  * Most foxes live on average 4 years. 
+  * Most foxes live up to 4 years. 
   * Large birth pulse in spring where the population doubles. 
 
 
@@ -275,9 +279,6 @@ knitr::include_graphics(c("images/chicken_head.jpg", "images/fixed_wing_hungary.
 
 ???
 
-* Over 2.36 million sq. km vaccinated
-* Equivalent to 550,000 soccer fields
-
 Over three decades, vaccine loaded chicken-heads were air-dropped across Europe covering a total of 2.36 million square kilometers, the equivalent of 550,000 soccer fields. 
 
 ---
@@ -311,9 +312,9 @@ knitr::include_graphics("images/vaccination_planning.jpg")
 ]
 
 .footnote[
-**Baker LL**, Matthiopoulos J, Müller T, Freuling C, Hampson K (2019). Optimizing
+[**Baker LL**, Matthiopoulos J, Müller T, Freuling C, Hampson K (2019). Optimizing
 spatial and seasonal deployment of vaccination campaigns to eliminate wildlife
-rabies. **Phil. Trans. R. Soc. B.** 374.]
+rabies. **Phil. Trans. R. Soc. B.** 374.](https://royalsocietypublishing.org/doi/10.1098/rstb.2018.0280)]
 
 ---
 # Where and When
@@ -352,12 +353,23 @@ knitr::include_graphics("images/vaccination_placement.jpg")
 
 ???
 
-Figure 2. Probability of elimination and ranked importance of campaigns across epidemiological scenarios. Left panels show the probability of elimination from all five regions in response to incremental vaccination (mean, and shaded 95% CI). (a) In the endemic scenario, 21 campaigns were required to eliminate rabies from all regions. (b) In the high-risk scenario, 19 campaigns were required to eliminate rabies from all regions, with vaccination of the endemic regions ranked first, and vaccination after the birth pulse (months 56 and 68) contributing most to the probability of elimination. A minimum of two or three campaigns was required in neighbouring rabies-free regions. (c) In the endgame scenario, nine campaigns were required to eliminate rabies from all regions.
+This figure shows the probability of elimination and ranked importance of campaigns across epidemiological scenarios. Left panels show the probability of elimination from all five regions in response to incremental vaccination (mean, and shaded 95% CI). (a) In the endemic scenario, 21 campaigns were required to eliminate rabies from all regions. (b) In the high-risk scenario, 19 campaigns were required to eliminate rabies from all regions, with vaccination of the endemic regions ranked first, and vaccination after the birth pulse (months 56 and 68) contributing most to the probability of elimination. A minimum of two or three campaigns was required in neighbouring rabies-free regions. (c) In the endgame scenario, nine campaigns were required to eliminate rabies from all regions.
+
+
+What we can see from these results is that:
+
+1. Similar effort is required in high-risk and endemic, even though fewer regions were initially infected. 
+
+
+2. Autumn campaigns were ranked highest and resulted in the greatest reductions in rabies because they come after the birth pulse. 
+
+3. Vaccination needed in rabies-free regions. Because rabies moves across borders, vaccination is still required in neighbouring regions. 
+
 
 ---
 # Time to Control and Elimination
 
-
+.left-column[
 
 ```{r, echo=FALSE, out.width=850, fig.align='center', fig.cap="Incidence Ratio of Rabies over time in response to vaccination"}
 
@@ -365,7 +377,22 @@ knitr::include_graphics("images/incidence_ratio.jpg")
 
 
 ```
+]
 
+.right-column[
+
+.center[
+
+## Susceptible Population
+
+<br>
+
+### `r icons::icon_style(icons::fontawesome("arrow-up"), scale = 1)` Birth pulse
+
+### `r icons::icon_style(icons::fontawesome("arrow-down"), scale = 1)` Vaccination
+]
+
+]
 .footnote[
 **Baker LL**, Matthiopoulos J, Mul̈ler T, Freuling C, Hampson K (2019). Optimizing
 spatial and seasonal deployment of vaccination campaigns to eliminate wildlife
@@ -401,7 +428,7 @@ class: center
 `r icons::icon_style(icons::fontawesome("paw"), scale = 2)`
 
 .center[
-### 3. Know your species/subject 
+### 3. Know your species
 ]
 
 ---
@@ -463,10 +490,11 @@ leaflet(data = vac_loc) %>%
 
 
 ---
-# Importance of Open Data
+# Role of Open Data
 
 <iframe src="https://andysouth.shinyapps.io/healthsites_viewer/" width="1016" height="516" frameBorder="0"></iframe>
 
+[Healthsites Viewer](https://andysouth.shinyapps.io/healthsites_viewer/)
 ???
 
 Open and up-to-date data is crucial to plan these efforts. With afrimapr we've been working closely with healthsites.io and other open mapping efforts to gather and visualise the data that is needed.
@@ -483,7 +511,7 @@ knitr::include_graphics("images/walk_travel_health.png")
 ```
 
 ### Health Accessibility, Côte d'Ivoire
- **Travel time in minutes walking**
+Travel time in minutes walking to local health centers
 ]
 
 .right-column[
@@ -507,10 +535,10 @@ Remote sensing and other open data sets can help to approximate health accessibi
 
 But if we define accessibility only in terms of physical distances, what are we missing?
 
-The extent to which a population 'gains access' also depends on financial, organisational and social or cultural barriers that limit the utilisation of services.
+The extent to which a population 'gains access' also depends on financial, organisational and social or cultural barriers that limit the use of services.
 
 
-The people who are best placed to answer these questions and devise a strategy are the communities and healthworkers with local knowledge who are closest to the issue.
+The people who are best placed to answer these questions and devise a strategy are the communities and healthworkers with local knowledge who are closest to the issues and the community.
 
 ---
 # Afrimapr tutorials
@@ -520,29 +548,42 @@ The people who are best placed to answer these questions and devise a strategy a
 Sign up for the [Afrimapr Tutorials](https://andysouth.shinyapps.io/intro-to-spatial-r/) and others at the [UseR! 2021 conference](https://www.conftool.org/user2021/index.php?page=browseSessions&form_session=3)
 
 ???
-With Afrimapr I am helping to develop spatial tutorials to equip communities with the tools to engage in data science work so that they may address issues of local and/or ecocultural importance 
+
+With Afrimapr I am helping to develop spatial tutorials to equip communities with the tools to engage in data science work so that they may address issues of local and/or ecocultural importance. This includes tutorials on how to visualise spatial data and where to access key health and environmental information.
 
 
 ---
 class: center
-## Computer science can provide us with the tools
+# Take Home
+
+### Computer science can provide us with the tools
 
 
-```{r, echo=FALSE, out.width=650, fig.align='center', fig.cap="Data Analysis assembly line: Wrangle, Visualise, Model"}
+```{r, echo=FALSE, out.width=620, fig.align='center', fig.cap="Data Analysis assembly line: Wrangle, Visualise, Model"}
 
 knitr::include_graphics("images/tidydata_5.jpg")
 
 ```
 
-Artwork by @allison_horst
+
+.footnote[Artwork by @allison_horst]
 
 --
 
-## But we bring the
+### But we bring the
 
 --
 
 ----
+
+
+
+.right-col[.center[
+`r icons::icon_style(icons::fontawesome("lightbulb", style = "solid"), scale = 2)`
+### Knowledge
+]]
+
+--
 
 .left-col[.center[
 `r icons::icon_style(icons::fontawesome("globe"), scale = 2)`
@@ -555,20 +596,18 @@ Artwork by @allison_horst
 .center[
 `r icons::icon_style(icons::fontawesome("users"), scale = 2)`
 ### Experience
+
 ]]
 
---
-
-.right-col[.center[
-`r icons::icon_style(icons::fontawesome("lightbulb", style = "solid"), scale = 2)`
-### Knowledge
-]]
 
 ???
 
-Computer science and data science can provide us with the tools to tackle issues, but
 
-Data is always a simplification of the human experience. 
+Computer science and data science can provide us with the tools to tackle complex issues. But we bring the knowledge, the context, and importantly the human experience and perspectives to make our work meaningful and equitable. 
+
+Data is always a simplification of the human experience and it is important that in our data science projects we ask the questions like those set out by Catherine D'Ingazio and Lauren Klein: "Data Science By Whom"? "Data Science For Whom?"?, "Data Science with whose interests in mind?" 
+
+We also need to value local knowledge and support communities in finding their own solutions to questions. 
 
 ---
 class: center
@@ -593,17 +632,11 @@ class: center
 
 ???
 
-- I'm excited about the opportunity to 
+- I'm excited about the opportunity at Bates to 
   - Help you to build your computer science toolset
   - support you in applying these tools to issues you care about.
   - work and engage with communities across Maine.
-- I'm very excited to hear about the questions that you are excited about exploring
-
-
-
-`r icons::icon_style(icons::fontawesome("wave-square", style = "solid"), scale = 2)` 
-### Navigate the role of data in society with you 
-
+- I look forward to hearing after this talk about the questions that you are excited about exploring.
 
 ---
 
@@ -636,7 +669,7 @@ Dr. Thomas Müller; Dr. Conrad Freuling; Patrick Wysocki
 
 **Afrimapr**: 
 
-Dr. Andy South (LSTM); Dr. Ahmadou Dicko (FAO, Senegal); Anelda Van der Walt (Talarify); Mark Herringer (healthsites.io);
+Dr. Andy South (LSTM); Dr. Ahmadou Dicko (FAO, Senegal); Shelmith Kariuki (Nairobi, Kenya); Anelda Van der Walt (Talarify); Mark Herringer (healthsites.io);
 
 **FCDO & ONS, UK**:  
 Dr. Joseph Crispell, Dr. Kevin Carolan
@@ -647,7 +680,10 @@ Dr. Joseph Crispell, Dr. Kevin Carolan
 class: inverse, center, middle
 # Additional slides
 
----
+???
+
+Some additional slides on impact of missing campaigns.
+
 
 ---
 # Impact of Missing Campaigns
@@ -687,6 +723,8 @@ knitr::include_graphics("images/rabies_presence.jpg")
 
 
 ???
+
+I also looked at what happens when things go wrong and we miss campaigns.
 
 * We found that consecutive and coordinated vaccination across geographical regions is required to rapidly control and eliminate rabies
 
