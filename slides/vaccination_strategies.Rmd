@@ -13,7 +13,7 @@ output:
     css: xaringan-themer2.css
     nature:
       highlightStyle: github
-      countIncrementalSlides: true
+      countIncrementalSlides: false
       ratio: 16:9
 editor_options: 
   chunk_output_type: console
@@ -130,7 +130,7 @@ About me.
 * Only two diseases have been eliminated worldwide: small pox and rinderpest.
 
 
-```{r, echo=FALSE, out.width=1050, fig.align='center', fig.cap="Patient's leg with small pox. Cattle that have died from rinderpest"}
+```{r, echo=FALSE, out.width=1050, fig.align='center', fig.cap="Two pictures: one of patient's leg with small pox and the other of cattle that have died from rinderpest"}
 
 knitr::include_graphics("images/small_pox_rinderpest.PNG")
 
@@ -195,7 +195,7 @@ knitr::include_graphics("images/rabies_hosts.jpg")
   * Large birth pulse in spring where the population doubles. 
 
 
-```{r, echo=FALSE, out.width=750, fig.align='center', fig.cap="Rabies cycle in foxes."}
+```{r, echo=FALSE, out.width=750, fig.align='center', fig.cap="Rabies disease cycle in foxes."}
 
 knitr::include_graphics("images/fox_rabies_timeline.png")
 
@@ -213,7 +213,7 @@ knitr::include_graphics("images/fox_rabies_timeline.png")
 # Spread of Rabies in Foxes
 
 .left-column[
-```{r, echo=FALSE, out.width=820, fig.align='center', fig.cap="Tidy Data."}
+```{r, echo=FALSE, out.width=820, fig.align='center', fig.cap="The spread of rabies in foxes across Europe."}
 
 knitr::include_graphics("images/rabies_spread.png")
 
@@ -250,7 +250,7 @@ AKA ["That Time Europe Air-dropped Vaccine-loaded Chicken Heads to Bait Rabid Fo
 
 
 .left-column[
-```{r, echo=FALSE, out.height=510, out.width = 660, fig.align='center', fig.cap="Animation showing distribution of vaccines."}
+```{r, echo=FALSE, out.height=510, out.width = 660, fig.align='center', fig.cap="Animation showing rabies cases and the historical distribution of vaccines."}
 
 knitr::include_graphics("images/western_europe_vac_cases_oct_2016.gif")
 
@@ -263,7 +263,7 @@ knitr::include_graphics("images/western_europe_vac_cases_oct_2016.gif")
 .right-column[
 <br>
 
-```{r, echo=FALSE, out.width=240, fig.align='center', fig.cap="Figure 1. Vaccine-loaded chicken heads. Figure 2. Fixed wing aircraft used to distribute vaccines."}
+```{r, echo=FALSE, out.width=240, fig.align='center', fig.cap="Image 1. Vaccine-loaded chicken heads. Image 2. Fixed wing aircraft used to distribute vaccines."}
 
 knitr::include_graphics(c("images/chicken_head.jpg", "images/fixed_wing_hungary.jpg"))
 
@@ -285,7 +285,7 @@ Over three decades, vaccine loaded chicken-heads were air-dropped across Europe 
 # Study
 
 .left-column[
-```{r, echo=FALSE, out.width=510, fig.align='center', fig.cap="Incidence Ratio"}
+```{r, echo=FALSE, out.width=510, fig.align='center', fig.cap="Time series showing the impact of vaccination on rabies incidence."}
 
 knitr::include_graphics("images/vaccination_planning.jpg")
 
@@ -323,7 +323,7 @@ rabies. **Phil. Trans. R. Soc. B.** 374.](https://royalsocietypublishing.org/doi
 .left-column[
 
 
-```{r, echo=FALSE, out.width=500, fig.align='center', fig.cap="Time to elimination for missed vaccination campaign sets."}
+```{r, echo=FALSE, out.width=500, fig.align='center', fig.cap="Ranked Campaigns and the impact on the proportion of runs eliminated."}
 
 knitr::include_graphics("images/vaccination_placement.jpg")
 
@@ -504,7 +504,7 @@ Open and up-to-date data is crucial to plan these efforts. With afrimapr we've b
 
 .left-column[
 
-```{r, echo=FALSE, out.width=650, fig.align='center', fig.cap="Map of Côte d'Ivoire showing estimated travel time walking."}
+```{r, echo=FALSE, out.width=650, fig.align='center', fig.cap="Map of Côte d'Ivoire showing estimated travel time walking to health centers."}
 
 knitr::include_graphics("images/walk_travel_health.png")
 
@@ -643,7 +643,7 @@ class: center
 # Thank You!
 
 .left-column[
-```{r, echo=FALSE, out.width=400, fig.align='center', fig.cap="Cake with fox and chicken heads on it"}
+```{r, echo=FALSE, out.width=400, fig.align='center', fig.cap="PhD Celebration Cake with fox and chicken heads on it"}
 
 knitr::include_graphics("images/fox_cake.jpg")
 
@@ -691,7 +691,7 @@ Some additional slides on impact of missing campaigns.
 .left-column[
 
 
-```{r, echo=FALSE, out.width=800, fig.align='center', fig.cap="Time to elimination for missed vaccination campaign sets."}
+```{r, echo=FALSE, out.width=800, fig.align='center', fig.cap="Time to elimination for different scenarios where campaigns were missed."}
 
 knitr::include_graphics("images/rabies_presence.jpg")
 
