@@ -4,3 +4,4 @@ Link to the [Github Pages website](https://laurielbaker.github.io/vaccination-st
 
 [Slides for Talk](slides/vaccination_strategies.html)
 
+[Rabies Background Slides](Rabies_Background.pdf)
